@@ -1,0 +1,30 @@
+﻿@model CustomerListViewModel
+
+@{  //üst satırda model olarak bunu kullan dedik
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+<body>
+
+    <table>
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.City</td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>

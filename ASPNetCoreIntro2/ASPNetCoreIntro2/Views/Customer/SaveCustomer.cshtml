@@ -1,0 +1,14 @@
+﻿@model SaveCustomerViewModel
+
+
+    <form asp-controller="Customer" asp-action="SaveCustomer">
+        Id: <input asp-for="Customer.Id" /><br/>
+        Adı: <input asp-for="Customer.FirstName" /><br />
+        Soyadı: <input asp-for="Customer.LastName" /><br />
+        Şehir: <select asp-for="Customer.City" asp-items="Model.Cities"></select>
+        <button type ="submit">Gönder</button>
+    </form>
+
+@section Scripts{ 
+    My scripts will be here (Scriptim burada)
+}
