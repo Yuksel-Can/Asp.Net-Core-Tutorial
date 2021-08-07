@@ -27,6 +27,7 @@ namespace ASPNetCoreIntro2
 
             services.AddScoped<ILogger, DatabaseLogger>();  //bunu yazmamýz gerekiyor
 
+            services.AddSession();
 
             services.AddControllersWithViews();
         }
@@ -46,6 +47,8 @@ namespace ASPNetCoreIntro2
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();       //session entegrasyonu
 
             app.UseRouting();
 
